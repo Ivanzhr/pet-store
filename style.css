@@ -21,6 +21,10 @@ body {
     color: var(--black-color);
 }
 
+.header__icons__for__phone {
+    display: none;
+}
+
 .nav__btn {
     text-decoration: none;
     color: var(--black-color);
@@ -84,6 +88,7 @@ section {
     display: flex;
     justify-content: space-between;
     width: 60px;
+    margin: 20px auto;
 }
 
 .item__name {
@@ -115,6 +120,7 @@ section {
 
 .header__about {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -154,6 +160,10 @@ section {
     right: -2px;
 }
 
+.wrapper__inp {
+    font-size: 16px;
+}
+
 .call {
     display: flex;
     align-items: center;
@@ -166,6 +176,7 @@ section {
 }
 
 .phone__number p {
+    font-size: 20px;
     font-weight: bold;
     text-decoration: underline;
 }
@@ -196,7 +207,7 @@ section {
     border-bottom: 1px solid #f4f4f4;
 }
 
-.heder__menu {
+.haeder__menu {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
@@ -214,13 +225,13 @@ section {
 
 /* banner */
 
-.banner {
+.banner{
+    margin: 0 auto;
     padding: 60px 75px;
-    width: 80%;
-    margin: 10px auto;
-    height: 360px;
+    max-width: 1180px;
+    height: 368px;
     background-image: url(icon/banner.png);
-    /* background-position: center; */
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -243,7 +254,7 @@ section {
 .banner__text button {
     width: 80%;
     height: 62px;
-    padding: 20px;
+    padding: 15px;
     background-color: var(--orange-color);
     color: var(--white-color);
     font-weight: bold;
@@ -254,16 +265,12 @@ section {
     margin-left: 10px;
 }
 
-.banner__slider {
-    margin: 20px auto;
-}
-
 
 /* items */
 
 .items {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 5px;
 }
@@ -271,6 +278,7 @@ section {
 .item {
     display: flex;
     flex-direction: column;
+    flex-basis: calc(25% - 10px);
     gap: 10px;
     padding: 10px;
     text-align: left;
@@ -357,7 +365,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 40%;
+    width: 50%;
     color: var(--white-color);
 }
 
@@ -373,7 +381,7 @@ section {
 
 .app__for__phone {
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
 }
 
 .iphone {
@@ -437,7 +445,6 @@ section {
     right: -45px;
 }
 
-
 /* footer */
 
 footer {
@@ -468,6 +475,7 @@ footer > div {
 }
 
 .footer__input {
+    font-size: 16px;
     height: 100%;
     width: 480px;
     border: none;
@@ -532,3 +540,116 @@ footer > div {
 .footer__inform .contact p:last-child {
     font-weight: bold;
 }
+
+
+@media (max-width: 1300px) {
+    .header__righth__section {
+        flex-direction: column;
+    }
+
+    .top__span {
+        display: none;
+    }
+
+    .item {
+        flex-basis: calc(50% - 10px);
+    }
+    
+    .banner__text {
+        width: 40%;
+    }
+
+  }
+
+  @media (max-width: 1040px) {
+    .header__about{
+        flex-direction: column;
+    }
+
+    .haeder__menu li{
+        flex: 1 1 33.33%;
+    }
+
+    .banner__text {
+        width: 60%;
+    }
+
+    .items {
+        flex-basis: 50%;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .header__top, .haeder__menu, .call, .for_user{
+        display: none;
+    }
+
+    .header__wrapper__section {
+        flex-direction: column;
+    }
+
+    .header__search {
+        width: 100%;
+    }
+
+    .logo__headeer {
+        font-size: 96px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .banner{
+        padding: 20px 0;
+        width: 100%;
+        height: 863px;
+        background-image: url(icon/banner__for__phone.png);
+        background-size: cover;
+        position: relative;
+    }
+
+    .banner__text {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .banner__title {
+        text-align: center;
+    }
+
+    .banner__slider {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .items {
+        gap: 20px;
+    }
+
+    .item {
+        flex-basis: calc(100% - 10px);
+        box-shadow: 0 5px 5px -5px rgba(129, 129, 129, 0.3),
+        5px 0 5px -5px rgba(129, 129, 129, 0.3),
+        -5px 0 5px -5px rgba(129, 129, 129, 0.3); 
+        
+    }
+
+    .item {
+        
+    }
+
+    .header__icons__for__phone {
+        display: flex;
+        margin: 20px 0;
+        width: 100%;
+        padding: 20px;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 5px -5px rgba(129, 129, 129, 0.3),
+        5px 0 5px -5px rgba(129, 129, 129, 0.3),
+        -5px 0 5px -5px rgba(129, 129, 129, 0.3);    
+    }
+  }
+
